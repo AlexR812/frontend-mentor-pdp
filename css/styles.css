@@ -1,0 +1,136 @@
+:root {
+    /* Primarios */
+    --Dark-cyan: hsl(158, 36%, 37%);
+    --Cream: hsl(30, 38%, 92%);
+
+    /* Neutrales */
+    --Very-dark-blue: hsl(212, 21%, 14%);
+    --Dark-grayish-blue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+
+    /* Fuentes */
+    --fuente-principal: "Montserrat", sans-serif;
+    --fuente-secundaria: "Fraunces", serif;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-size: 1.4rem;
+    background-color: var(--Cream);
+}
+
+
+
+h1, h2, p {
+    margin: 0;
+}
+
+.contenedor {
+    max-width: 90%;
+    width: 52rem;
+    margin: 0 auto;
+}
+
+.tarjeta-producto {
+    display: grid;
+    grid-template-columns: none;
+    grid-template-rows: 40% 60%;
+    grid-template-columns: none;
+    background-color: var(--White);
+    border-radius: 2rem;
+    height: 60rem;
+    margin-top: 10rem;
+}
+
+@media (min-width: 768px) {
+    .tarjeta-producto {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: none;
+        height: auto;
+    }    
+}
+
+.tarjeta-producto img {
+    width: 100%;
+    height: 100%;
+    border-radius: 1.5rem 1.5rem 0 0;
+}
+
+@media (min-width: 768px) {
+    .tarjeta-producto img {
+        border-radius: 1.5rem 0 0 1.5rem;
+    }
+}
+
+.datos-producto {
+    padding: 2rem;
+}
+
+.producto {
+    font-size: 1.6rem;
+    font-family: var(--fuente-principal);
+    font-weight: 400;
+    text-transform: uppercase;
+    color: var(--Dark-grayish-blue);
+    margin-bottom: 1.5rem;
+}
+
+.nombre-producto {
+    font-size: 3rem;
+    font-family: var(--fuente-secundaria);
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+}
+
+.descripcion {
+    font-size: 1.4rem;
+    font-family: var(--fuente-principal);
+    color: var(--Dark-grayish-blue);
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.precios {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+@media (min-width: 768px) {
+    .precios {
+        justify-content: center;
+    }
+}
+.precio-normal {
+    font-size: 1.4rem;
+    font-family: var(--fuente-principal);
+    text-decoration: line-through;
+    color: var(--Dark-grayish-blue);
+}
+
+.precio-descuento {
+    font-size: 2.5rem;
+    font-weight: bold;
+    font-family: var(--fuente-secundaria);
+    color: var(--Dark-cyan);
+}
+
+.boton {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    background-color: var(--Dark-cyan);
+    color: var(--White);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    font-family: var(--fuente-principal);
+}
